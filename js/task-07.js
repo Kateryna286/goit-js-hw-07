@@ -9,6 +9,5 @@ const text = document.querySelector('#text');
 input.addEventListener('input', updateValue);
 
 function updateValue(event) {
-    console.log(event.target.value);
     text.setAttribute("style", `font-size: ${event.target.value}px`);
 }
