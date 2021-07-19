@@ -3,19 +3,21 @@
 // Если инпут пустой, в спане должна отображаться строка 'незнакомец'.
 
 const refs = {
-    input: document.querySelector('#name-input'),
-    nameLabel: document.querySelector('#name-output'),
-  };
+  input: document.querySelector('#name-input'),
+  nameLabel: document.querySelector('#name-output'),
+};
   
-  refs.input.addEventListener('input', onInputChange);
+refs.input.addEventListener('input', onInputChange);
   
-  function onInputChange(event) {
-    if (event.currentTarget.value.length !== 0) {
-        refs.nameLabel.textContent = event.currentTarget.value; 
-    }
-    else {
-    refs.nameLabel.textContent = 'незнакомец';
-    };
+function onInputChange(event) {
+  
+  if (event.currentTarget.value.trim().length !== 0) {
+    refs.nameLabel.textContent = event.currentTarget.value; 
   }
+    
+  else {
+    refs.nameLabel.textContent = 'незнакомец';
+  };
+};
 
   
