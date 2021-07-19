@@ -12,15 +12,9 @@ const dataCounter = document.querySelector("#value");
 
 let counterValue = +dataCounter.textContent;
 
-decBtn.addEventListener('click', () => {
-    console.log('Отнимаю 1');
-    decrement ();
-});
+decBtn.addEventListener('click', decrement);
 
-incBtn.addEventListener('click', () => {
-    console.log('Добавляю 1');
-    increment ();
-});
+incBtn.addEventListener('click', increment);
 
 function decrement () {
     counterValue -= 1;
