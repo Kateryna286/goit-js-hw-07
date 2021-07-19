@@ -22,15 +22,11 @@ const images = [
   ];
 
 const list = document.querySelector('#gallery');
-const imgList = [];
 
-  for (let i = 0; i < images.length; i += 1) {
-    const src = images[i].url;
-    const alt = images[i].alt;
-    const img = `<li><img src="${src}" alt="${alt}" width = "640"></li>`;
+images.forEach((img, idx) => {
+  const src = images[idx].url;
+  const alt = images[idx].alt;
+  const image = `<li><img src="${src}" alt="${alt}" width = "340"></li>`;
 
-    imgList.push(img);
-    
-}
-
-list.insertAdjacentHTML('beforeend', imgList.join(''));
+  list.insertAdjacentHTML('beforeend', image);
+});
